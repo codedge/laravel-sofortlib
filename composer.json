@@ -1,6 +1,6 @@
 {
     "name": "codedge/laravel-sofortlib",
-    "description" : "",
+    "description" : "Laravel 5 package for use with SofortLib/SOFORT API, provides a facade to work with.",
     "license": "MIT",
     "keywords": [
           "sofortlib",
