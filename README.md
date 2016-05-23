@@ -6,7 +6,7 @@ See [@SofortLib](https://github.com/sofort/sofortlib-php) for more information a
 ## Installation using [Composer](https://getcomposer.org/)
 ```sh
 $ cd <YOUR LARAVEL PROJECT ROOT>
-$ composer require codedge/laravel-sofortlib
+$ composer require codedge/laravel-sofortlib:"dev-master"
 ```
 
 This adds the laravel-sofortlib package to your `composer.json` and downloads the project.
