@@ -1,0 +1,35 @@
+{
+    "name": "codedge/laravel-sofortlib",
+    "description" : "",
+    "license": "MIT",
+    "keywords": [
+          "sofortlib",
+          "laravel",
+          "sofortüberweisung",
+          "sofortueberweisung",
+          "paycode",
+          "sofort api"
+    ],
+    "authors": [
+        {
+            "name": "Holger Lösken",
+            "email": "holger.loesken@codedge.de"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "laravel/framework": "5.*",
+        "sofort/sofortlib-php": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codedge\\Sofortlib\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
