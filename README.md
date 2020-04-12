@@ -1,3 +1,7 @@
+[![Latest Stable Version](https://poser.pugx.org/codedge/laravel-sofortlib/v/stable)](https://packagist.org/packages/codedge/laravel-sofortlib)
+[![Total Downloads](https://poser.pugx.org/codedge/laravel-sofortlib/downloads)](https://packagist.org/packages/codedge/laravel-sofortlib)
+[![License](https://poser.pugx.org/codedge/laravel-sofortlib/license)](https://packagist.org/packages/codedge/laravel-sofortlib)
+
 # Laravel integration for Sofortlib
 This repository implements a simple [ServiceProvider](https://laravel.com/docs/master/providers)
 that creates a singleton instance of the Sofortlib client easily accessible via a [Facade](https://laravel.com/docs/master/facades).  
