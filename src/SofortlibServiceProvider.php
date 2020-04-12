@@ -1,16 +1,20 @@
-<?php namespace Codedge\Sofortlib;
+<?php declare(strict_types=1);
+
+namespace Codedge\Sofortlib;
 
 use Illuminate\Support\ServiceProvider;
+use Sofort\SofortLib\Billcode;
+use Sofort\SofortLib\BillcodeDetails;
+use Sofort\SofortLib\Ideal;
+use Sofort\SofortLib\IdealBanks;
+use Sofort\SofortLib\Paycode;
+use Sofort\SofortLib\PaycodeDetails;
+use Sofort\SofortLib\Refund;
+use Sofort\SofortLib\Sofortueberweisung;
+use Sofort\SofortLib\TransactionData;
 
 class SofortlibServiceProvider extends ServiceProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-
     /**
      * Perform post-registration booting of services.
      *
@@ -183,25 +187,5 @@ class SofortlibServiceProvider extends ServiceProvider
             $apiUrl = config('sofortlib.transactiondata.api_url');
             return new \Sofort\SofortLib\TransactionData($configKey, $apiUrl);
         });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [
-            'billcode',
-            'billcodedetails',
-            'ideal',
-            'idealbanks',
-            'paycode',
-            'paycodedetails',
-            'sofortueberweisung',
-            'refund',
-            'transactiondata'
-        ];
     }
 }

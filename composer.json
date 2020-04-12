@@ -1,6 +1,6 @@
 {
     "name": "codedge/laravel-sofortlib",
-    "description" : "Laravel 5 package for use with SofortLib/SOFORT API, provides a facade to work with.",
+    "description" : "Laravel package for use with SofortLib/SOFORT API, provides a facade to work with.",
     "license": "MIT",
     "keywords": [
           "sofortlib",
@@ -17,18 +17,40 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "5.*",
+        "php": ">=7.3",
+        "illuminate/support": "^6.0|^7.0",
         "sofort/sofortlib-php": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0|^5.0",
+        "phpunit/phpunit": "^8.0|^9.0"
     },
     "autoload": {
         "psr-4": {
             "Codedge\\Sofortlib\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Codedge\\Sofortlib\\Tests\\": "tests/"
+        }
+    },
     "extra": {
-        "branch-alias": {
-            "dev-master": "5.0-dev"
+        "laravel": {
+            "providers": [
+                "Codedge\\Sofortlib\\SofortlibServiceProvider"
+            ],
+            "aliases": {
+                "Billcode": "Codedge\\Sofortlib\\BillcodeFacade",
+                "BillcodeDetails": "Codedge\\Sofortlib\\BillcodeDetailsFacade",
+                "Ideal": "Codedge\\Sofortlib\\IdealFacade",
+                "IdealBanks": "Codedge\\Sofortlib\\IdealBanksFacade",
+                "Paycode": "Codedge\\Sofortlib\\PaycodeFacade",
+                "PaycodeDetails": "Codedge\\Sofortlib\\PaycodeDetailsFacade",
+                "Sofortueberweisung": "Codedge\\Sofortlib\\SofortueberweisungFacade",
+                "Refund": "Codedge\\Sofortlib\\RefundFacade",
+                "TransactionData": "Codedge\\Sofortlib\\TransactionDataFacade"
+            }
         }
     }
 }
